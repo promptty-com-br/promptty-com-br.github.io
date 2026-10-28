@@ -4,9 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#2CFF05" />
-    <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
-    <link rel="shortcut icon" href="assets/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="assets/favicon.png"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
     <meta
       name="description"
       content="A Promptty conecta tecnologia, educação e pesquisa para transformar conhecimento em soluções reais."
@@ -170,7 +175,7 @@
       .terminalbody {
         padding: 28px 24px 30px;
         font:
-          clamp(0.8rem, 1.4vw, 1rem)/2 ui-monospace,
+          clamp(0.8rem, 1.4vw, 1rem)/1.7 ui-monospace,
           SFMono-Regular,
           Menlo,
           monospace;
@@ -373,8 +378,18 @@
         color: var(--lime);
       }
       @media (max-width: 800px) {
+        .nav {
+          gap: 16px;
+        }
+        .navlinks {
+          gap: 0;
+        }
         .navlinks a:not(.navcta) {
           display: none;
+        }
+        .navcta {
+          padding: 10px 12px;
+          font-size: 0.85rem;
         }
         .hero {
           grid-template-columns: 1fr;
@@ -410,6 +425,28 @@
           font-size: 0.7rem;
         }
       }
+      @media (max-width: 420px) {
+        .wrap {
+          width: min(var(--max), calc(100% - 28px));
+        }
+        .brand {
+          gap: 8px;
+          font-size: 1.25rem;
+        }
+        .promptmark {
+          font-size: 1.45rem;
+        }
+        .navcta {
+          padding: 9px 10px;
+          font-size: 0.78rem;
+        }
+        .hero h1 {
+          font-size: clamp(2.8rem, 13vw, 3.2rem);
+        }
+        .terminalbody {
+          padding: 22px 16px 24px;
+        }
+      }
       @media (prefers-reduced-motion: reduce) {
         html {
           scroll-behavior: auto;
@@ -427,7 +464,8 @@
         <span>promp<span class="tty">tty</span></span>
       </a>
       <nav class="navlinks" aria-label="Navegação principal">
-        <a href="#atuacao">O que fazemos</a><a href="#metodo">Nossa abordagem</a>
+        <a href="#atuacao">O que fazemos</a>
+        <a href="#metodo">Nossa abordagem</a>
         <a class="navcta" href="#contato">Vamos conversar ↗</a>
       </nav>
     </header>
@@ -442,8 +480,8 @@
             seguir.
           </p>
           <div class="actions">
-            <a class="btn primary" href="#atuacao">Explore a Promptty ↘</a
-            ><a class="btn" href="#contato">Traga seu desafio ↗</a>
+            <a class="btn primary" href="#atuacao">Explore a Promptty ↘</a>
+            <a class="btn" href="#contato">Traga seu desafio ↗</a>
           </div>
         </div>
         <div class="terminal" aria-label="Ilustração de terminal de computador">
@@ -569,9 +607,11 @@
               juntos.
             </p>
           </div>
-          <a class="btn"
+          <a
+            class="btn"
             href="mailto:promptty.contact@gmail.com?subject=Vamos%20conversar%20com%20a%20Promptty"
-            >Fale com a Promptty ↗</a>
+            >Fale com a Promptty ↗</a
+          >
         </div>
       </section>
     </main>
@@ -582,26 +622,37 @@
           <span>promp<span class="tty">tty</span></span>
         </a>
         <small>
-          © <span id="year"></span> Promptty. Tecnologia, educação e pesquisa.
+          © <span id="year">2026</span> Promptty. Tecnologia, educação e
+          pesquisa.
         </small>
         <div class="footerlinks">
           <a href="#atuacao">Atuação</a>
           <a href="#metodo">Abordagem</a>
           <a href="#contato">Contato</a>
-          <a href="https://github.com/promptty-com-br"
+          <a
+            href="https://github.com/promptty-com-br"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Promptty no GitHub">
+            aria-label="Promptty no GitHub"
+          >
             <svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20">
-              <path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.32-3.76-1.32-.5-1.3-1.23-1.65-1.23-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.7-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.21-5.08 5.49.4.35.75 1.02.75 2.06v3.06c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/>
+              <path
+                fill="currentColor"
+                d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.32-3.76-1.32-.5-1.3-1.23-1.65-1.23-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.92.1-.72.39-1.21.7-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.21-5.08 5.49.4.35.75 1.02.75 2.06v3.06c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"
+              />
             </svg>
           </a>
-          <a href="https://www.instagram.com/promptty.com.br"
+          <a
+            href="https://www.instagram.com/promptty.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Promptty no Instagram">
+            aria-label="Promptty no Instagram"
+          >
             <svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20">
-              <path fill="currentColor" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/>
+              <path
+                fill="currentColor"
+                d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"
+              />
             </svg>
           </a>
         </div>
